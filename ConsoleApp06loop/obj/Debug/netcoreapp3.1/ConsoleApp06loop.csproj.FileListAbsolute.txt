@@ -1,0 +1,13 @@
+D:\visualstudio\ConsoleApp06loop\bin\Debug\netcoreapp3.1\ConsoleApp06loop.exe
+D:\visualstudio\ConsoleApp06loop\bin\Debug\netcoreapp3.1\ConsoleApp06loop.deps.json
+D:\visualstudio\ConsoleApp06loop\bin\Debug\netcoreapp3.1\ConsoleApp06loop.runtimeconfig.json
+D:\visualstudio\ConsoleApp06loop\bin\Debug\netcoreapp3.1\ConsoleApp06loop.runtimeconfig.dev.json
+D:\visualstudio\ConsoleApp06loop\bin\Debug\netcoreapp3.1\ConsoleApp06loop.dll
+D:\visualstudio\ConsoleApp06loop\bin\Debug\netcoreapp3.1\ConsoleApp06loop.pdb
+D:\visualstudio\ConsoleApp06loop\obj\Debug\netcoreapp3.1\ConsoleApp06loop.csprojAssemblyReference.cache
+D:\visualstudio\ConsoleApp06loop\obj\Debug\netcoreapp3.1\ConsoleApp06loop.AssemblyInfoInputs.cache
+D:\visualstudio\ConsoleApp06loop\obj\Debug\netcoreapp3.1\ConsoleApp06loop.AssemblyInfo.cs
+D:\visualstudio\ConsoleApp06loop\obj\Debug\netcoreapp3.1\ConsoleApp06loop.csproj.CoreCompileInputs.cache
+D:\visualstudio\ConsoleApp06loop\obj\Debug\netcoreapp3.1\ConsoleApp06loop.dll
+D:\visualstudio\ConsoleApp06loop\obj\Debug\netcoreapp3.1\ConsoleApp06loop.pdb
+D:\visualstudio\ConsoleApp06loop\obj\Debug\netcoreapp3.1\ConsoleApp06loop.genruntimeconfig.cache
