@@ -1,0 +1,70 @@
+test26struct8_pointer2.c
+#include <stdio.h>
+
+typedef struct{
+   int num;
+   char *id;
+   char *pw;
+   char *name;
+   char *tel;
+}Member;
+
+typedef struct{
+   char *car_name;
+   char *car_model;
+   int car_price;
+}Car;
+
+typedef struct{
+	char *tel;
+	char *email;
+	char *addr;
+}Contact, *pt_Contact;
+
+void test01(Member *pt_m);
+void test02(Car *pt_c);
+void test03(Contact *pt_ctt);
+
+int main(int argc, char **argv)
+{
+	printf("Hello struct & pointer2...\n");
+	Member m;
+	Member *pt_m = &m;
+	pt_m->num = 11;
+    pt_m->id = "aaa";
+    pt_m->pw = "aa1212";
+    pt_m->name = "kim";
+    pt_m->tel = "010";
+    test01(pt_m);
+    printf("\n");
+    
+    Car c;
+    Car *pt_c = &c;
+    pt_c->car_name = "asdf";
+    pt_c->car_model = "qwer";
+    pt_c->car_price = 50000;
+    test02(pt_c);
+	printf("\n");
+	
+	Contact ctt;
+	pt_Contact pt_ctt = &ctt;
+	//Contact *pt_ctt = &ctt;
+	pt_ctt->tel = "010";
+	pt_ctt->email = "naver.com";
+	pt_ctt->addr = "mansu";
+	test03(pt_ctt);
+	
+	return 0;
+}
+
+void test01(Member *pt_m){
+	printf("%d. %s %s %s %s\n",pt_m->num, pt_m->id, pt_m->pw, pt_m->name, pt_m->tel);
+}
+
+void test02(Car *pt_c){
+	printf("Car:%s %s %d\n",pt_c->car_name,pt_c->car_model,pt_c->car_price);
+}
+
+void test03(Contact *pt_ctt){
+	printf("Contact:%s, %s, %s\n",pt_ctt->tel,pt_ctt->email,pt_ctt->addr);
+}

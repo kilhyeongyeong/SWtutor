@@ -1,0 +1,49 @@
+test06variable.c
+#include <stdio.h>
+
+int su = 10;
+static int su2 = 22;
+const int su3 = 88;
+
+int main(int argc, char **argv)
+{
+	printf("Hello variable...\n");
+	
+	printf("su:%d\n", su);
+	su = 11;
+	printf("su:%d\n\n", su);
+	
+	
+	printf("static su2:%d\n", su2);
+	su2 = 222;
+	printf("static su2:%d\n\n", su2);
+	
+	static int su_num = 999;
+	printf("static s_sum : %d\n\n", su_num);
+	
+	//su3 = 333; const = read-only
+	printf("const su3 : %d\n\n", su3);
+	
+	const int su4 = 44;
+	//su4 = 100; const = read_only 
+	printf("const su4 : %d\n\n", su4);
+	
+	
+	//true:1 false=0
+	if(1){
+		/*auto*/ int kor=77;
+		printf("in if block >> kor : %d\n\n", kor);
+	}
+	//printf("in if block >> kor : %d\n\n", kor); local variable kor
+	
+	register int total=100; //CPU save >> speed up
+	printf("resgister int total : %d\n\n", total);
+	
+	volatile int total2 = 200; //memory speed up
+	printf("volatitle int total2 : %d\n\n", total2);
+	
+	
+	
+	
+	return 0;
+}

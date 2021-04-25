@@ -1,0 +1,31 @@
+test18function_mission.h
+int insert(){
+	printf("insert()....\n");
+	return 1;
+}
+
+int update(){
+	printf("update()....\n");
+	return 1;
+}
+
+int eliminate(){
+	printf("eliminate()....\n");
+	return 1;
+}
+
+char* selectOne(){
+	printf("selectOne()....\n");
+	return "selectOne";
+}
+
+char* selectAll(){
+	printf("selectAll()....\n");
+	return "selectAll";
+}
+
+char* searchList(char* searchKey, char* searchWord){
+	printf("searchList()....\n");
+	printf("searchKey : %s, searchWord : %s\n", searchKey, searchWord);
+	return "searchList";
+}

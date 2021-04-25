@@ -1,0 +1,65 @@
+test19pointer3array.c
+#include <stdio.h>
+
+#define SUS_LENGTH 3
+#define DS_LENGTH 4
+
+void test01();
+void test02();
+
+int main(int argc, char **argv)
+{
+	printf("Hello pointer and array....\n");
+	
+	int sus[SUS_LENGTH] = {11,22,33}; //4*3=12byte
+	printf("sus address : %p\n", sus);
+	printf("sus[0] address : %p\n", &sus[0]);
+	printf("sus[0]==*sus value : %d, %d\n", sus[0], *sus);
+	printf("sus[0]==*(sus+0) value : %d, %d\n", sus[0], *(sus+0));
+	printf("sus[1]==*(sus+1) value : %d, %d\n", sus[1], *(sus+1));
+	printf("sus[2]==*(sus+2) value : %d, %d\n", sus[2], *(sus+2));
+	printf("sus sizeof : %dbyte\n", sizeof(sus));
+	int i;
+	for(i=0; i<SUS_LENGTH; i++){
+		printf("sus[%d] value : %d\n", i, sus[i]);
+	}
+	printf("\n");
+	
+	int *pt = sus; //4byte
+	printf("pt address : %p\n", pt);
+	printf("pt[0] value : %d\n", pt[0]);
+	printf("pt[0], *(pt+0) value : %d, %d\n", pt[0], *(pt+0));
+	printf("pt sizeof : %dbyte\n", sizeof(pt));
+	for(i=0; i<SUS_LENGTH; i++){
+		printf("pt[%d], *(pt+%d) value : %d, %d\n",i, i, pt[i], *(pt+i));
+	}
+	printf("\n");
+	
+	test01(pt);
+	printf("\n");
+	
+	double ds[DS_LENGTH] = {11.11,22.22,33.33,44.44};
+	printf("ds sizeof : %dbyte\n", sizeof(ds));
+	double *pt_ds = ds;
+	test02(pt_ds);
+	
+	return 0;
+}//end main
+
+void test01(int *pt){
+	printf("test01()...\n");
+	printf("pt sizeof : %dbyte\n", sizeof(pt));
+	int i;
+	for(i=0; i<SUS_LENGTH; i++){
+		printf("pt[%d], *(pt+%d) value : %d, %d\n",i, i, pt[i], *(pt+i));
+	}
+}
+
+void test02(double *pt){
+	printf("test01()...\n");
+	printf("pt sizeof : %dbyte\n", sizeof(pt));
+	int i;
+	for(i=0; i<DS_LENGTH; i++){
+		printf("pt[%d], *(pt+%d) value : %.2lf, %.2lf\n",i, i, pt[i], *(pt+i));
+	}
+}

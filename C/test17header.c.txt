@@ -1,0 +1,30 @@
+test17header.c
+#include <stdio.h>
+#include "test17header.h"
+
+int main(int argc, char **argv)
+{
+	printf("Hello Header file....\n");
+	
+	printf("test17header.h su : %d\n",su);
+	
+	test01();
+	printf("\n");
+	
+	char name[10] = "yangssem";
+	test02(name);
+	printf("\n");
+	
+	char name3[10] = "yangssem3";
+	test02(name3);
+	printf("\n");
+	
+	char *chr = test04();
+	printf("chr : %s\n\n", chr);
+	
+	printf("test05 : %d\n\n", test05());
+	printf("test06 : %p\n\n", test06());
+
+	
+	return 0;
+}

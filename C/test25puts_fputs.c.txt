@@ -1,0 +1,29 @@
+test25puts_fputs.c
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+	printf("printf >>>>>> puts, fputs \n");
+	
+	char str[10] = "yangssem";
+	puts(str); //printf("\n");
+	puts(str);
+	puts(str);
+	
+	char *str2 = "kim";
+	puts(str2);
+	puts(str2);
+	puts(str2);
+	
+	int su = 33;
+	//puts(&su); char only
+	//puts(&su);
+	
+	fputs(str, stdout); //printf("");
+	fputs(str, stdout);
+	fputs("\n", stdout);
+	
+	
+	
+	return 0;
+}

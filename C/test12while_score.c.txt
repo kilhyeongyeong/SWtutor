@@ -1,0 +1,57 @@
+test12while_score.c
+#include <stdio.h>
+#include <string.h>
+
+int main(int argc, char **argv)
+{
+	printf("while num, name, kor, eng, math, total, avg, grade...\n");
+	
+	int num=1;
+	char name[20], *grade = "";
+	int kor, eng, math, total;
+	double avg;
+	
+	while(1){
+		printf("Input name >> ");
+		scanf("%s", name);
+		
+		printf("Input kor Score >> ");
+		scanf("%d", &kor);
+		
+		printf("Input eng Score >> ");
+		scanf("%d", &eng);
+		
+		printf("Input math Score >> ");
+		scanf("%d", &math);
+		
+		total = kor + eng + math;
+		avg = total/3.0;
+		
+		switch((int)avg/10){
+			case 10:
+			case 9:
+				grade = "A";
+				break;
+			case 8:
+				grade = "B";
+				break;
+			case 7:
+				grade = "C";
+				break;
+			case 6:
+				grade = "D";
+				break;
+			default:
+				grade = "F";
+				break;	
+		}
+		printf("%d. name:%s, kor:%d, eng:%d, math:%d, total:%d, avg:%.2lf, grade:%s\n", num, name, kor, eng, math, total, avg, grade);
+		printf("EXIT...???[press x or X] >> ");
+		char exit[2];
+		scanf("%s", exit);
+		
+		if(strcmp(exit,"x")==0 || strcmp(exit,"X")==0) break;
+	}
+	
+	return 0;
+}

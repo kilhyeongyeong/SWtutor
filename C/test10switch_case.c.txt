@@ -1,0 +1,25 @@
+test10switch_case.c
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+	printf("switch case....\n");
+	
+	double avg = 99.99;
+	char *grade = "";
+	switch((int)avg/10){
+		case 10:
+			goto AAA;
+		case 9:
+			grade="A";
+			break;
+		default:
+			grade="F";
+			break;
+	}
+	
+	printf("grade : %s\n", grade);
+	AAA : printf("AAA : LINE[%d]\n", __LINE__);
+	
+	return 0;
+}

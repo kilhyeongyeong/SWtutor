@@ -1,0 +1,47 @@
+test04scanf.c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char **argv)
+{
+	printf("scanf \n");
+	
+	/*
+	printf("Input your name[200byte]: \n");
+	char name[201];
+	scanf("%200s", name);
+	printf("scanf name : %s\n\n", name);
+	
+	int su;
+	printf("Input your su: ");
+	scanf("%d", &su);
+	printf("scanf su : %d\n\n", su);
+		
+	double avg; //99.99
+	printf("Input your avg: ");
+	scanf("%lf", &avg);
+	printf("scanf avg : %.2lf\n\n", avg+100.123);
+	*/
+	
+	char str[] = "123";
+	printf("str : %s\n", str);
+	printf("str : %s\n\n", str+100);
+	
+	//#include <strlib.h>
+	int i_str = atoi(str); //char to int
+	printf("str : %d\n\n", i_str+100); //nonono
+	
+	char *kor = "99";
+	int i_kor = atoi(kor); //char to int
+	printf("i_kor : %d\n\n", i_kor*2);
+	
+	
+	char *pi = "3.14";
+	//double d_pi = atoi(pi); //char to int
+	double d_pi = atof(pi); //char to float or double
+	printf("d_pi : %lf\n\n", d_pi+10.0);
+	
+	
+	
+	return 0;
+}

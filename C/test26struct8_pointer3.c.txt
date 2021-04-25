@@ -1,0 +1,97 @@
+test26struct8_pointer3.c
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+typedef struct{
+   int num;
+   char *id;
+   char *pw;
+   char *name;
+   char *tel;
+}Member;
+
+typedef struct{
+   char *name;
+   char *model;
+   int price;
+}Car;
+
+typedef struct{
+	char *tel;
+	char *email;
+	char *addr;
+}Contact, *pt_Contact;
+
+struct Person{
+	char name[20];
+	int age;
+};
+
+Member* test01();
+Car* test02();
+Contact* test03();
+//struct Person test04();
+struct Person* test05();
+
+int main(int argc, char **argv)
+{
+	printf("Hello struct & pointer3...\n");
+	
+	Member *pt_m = test01();
+	printf("%d. %s, %s, %s, %s\n\n",pt_m->num, pt_m->id, pt_m->pw, pt_m->name, pt_m->tel);
+	
+	Car *pt_c = test02();
+	printf("Car : %s, %s, %d\n\n",pt_c->name,pt_c->model,pt_c->price);
+	
+	Contact *pt_ctt = test03();
+	printf("Contact : %s, %s, %s\n\n",pt_ctt->tel,pt_ctt->email,pt_ctt->addr);
+	
+	struct Person *pt_p = test05();
+	printf("Person : %s, %d\n",pt_p->name, pt_p->age);
+	free(pt_p); //*****
+	
+	
+	return 0;
+}
+
+Member* test01(){
+	Member m;
+	Member *pt_m = &m;
+	pt_m->num = 1;
+	pt_m->id = "hello?";
+	pt_m->pw = "nice";
+	pt_m->name = "you";
+	pt_m->tel = "032";
+	
+	return pt_m;
+}
+
+Car* test02(){
+	Car c;
+	Car *pt_c = &c;
+	pt_c->name = "good";
+	pt_c->model = "boy";
+	pt_c->price = 1004;
+	
+	return pt_c;
+}
+
+Contact* test03(){
+	Contact ctt;
+	Contact *pt_ctt = &ctt;
+	pt_ctt->tel = "032";
+	pt_ctt->email = "daum.net";
+	pt_ctt->addr = "Incheon";
+	
+	return pt_ctt;
+}
+
+struct Person* test05(){
+	//struct Person p;
+	//struct Person *pt_p = &p;
+	struct Person *pt_p = malloc(sizeof(struct Person));
+	strcpy(pt_p->name, "ann");
+	pt_p->age = 24;
+	return pt_p;
+}

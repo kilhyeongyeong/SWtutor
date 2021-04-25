@@ -1,0 +1,75 @@
+test26struct6_array.c
+#include <stdio.h>
+
+typedef struct contact{
+	char *tel, *email, *addr;
+}Contact;
+
+typedef struct score{
+	int kor, eng, math, total;
+	double avg;
+}Score;
+
+typedef struct student{
+	char *name;
+	Contact ctt;
+	Score s;
+}Student;
+
+int main(int argc, char **argv)
+{
+	printf("Hello struct array...\n");
+
+	int a1 = 10;
+	int a2 = 20;
+	int sus[2] = {a1, a2};
+	printf("%d\n", sus[0]);
+	printf("%d\n\n", sus[1]);
+	
+	Contact ctt1 = {"02", "ccc@ccc.com", "busan"};
+	Contact ctt2 = {"031", "hhh@hhh.com", "jeju"};
+	Contact ctts[2] = {ctt1, ctt2};
+	printf("ctts[0].tel : %s\n", ctts[0].tel);
+	printf("ctts[0].email : %s\n", ctts[0].email);
+	printf("ctts[0].addr : %s\n", ctts[0].addr);
+	printf("ctts[1].tel : %s\n", ctts[1].tel);
+	printf("ctts[1].email : %s\n", ctts[1].email);
+	printf("ctts[1].addr : %s\n\n", ctts[1].addr);
+	
+	printf("ctts size : %d\n", sizeof(ctts));
+	printf("Contact size : %d\n\n", sizeof(Contact));
+	int i;
+	for(i=0; i<sizeof(ctts)/sizeof(Contact); i++){
+		printf("%s ", ctts[i].tel);
+		printf("%s ", ctts[i].email);
+		printf("%s\n", ctts[i].addr);
+	}
+	printf("\n");
+	
+	Score s = {99,88,77, s.kor+s.eng+s.math, s.total/3};
+	Score s2 = {90,90,66, s2.kor+s2.eng+s2.math, s2.total/3};
+	Score s3[2] = {s, s2};
+	
+	for(i=0; i<sizeof(s3)/sizeof(Score); i++){
+		printf("%d %d %d %d %.2lf\n", s3[i].kor, s3[i].eng, s3[i].math, s3[i].total, s3[i].avg);
+	}
+	printf("\n");
+	
+	Student st = {"kim", ctts[0], s3[0]};
+	Student st2 = {"lee", ctts[1], s3[1]};
+	Student st3[2] = {st, st2};
+	
+	for(i=0; i<sizeof(st3)/sizeof(Student); i++){
+		printf("%s ", st3[i].name);
+		printf("%s ", st3[i].ctt.tel);
+		printf("%s ", st3[i].ctt.email);
+		printf("%s ", st3[i].ctt.addr);
+		printf("%d ", st3[i].s.kor);
+		printf("%d ", st3[i].s.eng);
+		printf("%d ", st3[i].s.math);
+		printf("%d ", st3[i].s.total);
+		printf("%.2lf\n", st3[i].s.avg);
+	}
+	
+	return 0;
+}

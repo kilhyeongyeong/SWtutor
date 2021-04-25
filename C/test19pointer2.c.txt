@@ -1,0 +1,67 @@
+test19pointer2.c
+#include <stdio.h>
+#include <string.h>
+
+void test01();
+void test02();
+void test03();
+void test04();
+
+int main(int argc, char **argv)
+{
+	printf("Hello pointer2....\n");
+	
+	int *pt = 0;
+	printf("pt address : %p\n", pt); //(nil) -- null=nil
+	
+	int *pt2 = NULL;
+	printf("pt2 address : %p\n", pt2); //(nil)
+	
+	int x = 33;
+	int *pt3 = &x;
+	printf("pt3 address : %p\n", pt3); 
+	
+	//test01(pt);
+	//test01(pt2);
+	test01(pt3);
+	
+	double d = 33.33;
+	double *pd = &d;
+	test02(pd);
+	
+	printf("\n");
+	
+	char c = 'A';
+	char *pc = &c;
+	test03(pc);
+
+	char *pc2 = "kim";
+	test04(pc2);
+	
+	return 0;
+}//end main
+
+void test02(double *pt){
+	printf("test02()...\n");
+	printf("pt address : %p\n", pt);
+	printf("*pt value : %.2lf\n", *pt);
+}
+
+void test01(int *pt){
+	printf("test01()...\n");
+	printf("pt address : %p\n", pt);
+	printf("*pt value : %d\n", *pt);
+}
+
+void test03(char *pt){
+	printf("test03()...\n");
+	printf("pt address : %p\n", pt);
+	printf("*pt value : %c\n", *pt);
+}
+
+void test04(char *pt){
+	printf("test04()...\n");
+	printf("pt address : %p\n", pt);
+	printf("*pt value : %s\n", pt);
+	//printf("strlen(pt) : %d\n", strlen(pt)); strlen(here not *)
+}

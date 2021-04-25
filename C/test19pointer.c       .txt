@@ -1,0 +1,50 @@
+test19pointer.c       
+#include <stdio.h>
+void test01(int x){
+	printf("x value : %d\n", x);
+}
+
+void test02(int *x){
+	printf("x address : %p\n", x);
+}
+
+int main(int argc, char **argv)
+{
+	printf("Hello pointer....\n");
+	
+	int su = 100;
+	printf("su value: %d\n", su);
+	printf("su address: %p\n", &su);
+	printf("su sizeof: %dbyte\n", sizeof(&su));
+	test01(su);
+	test02(&su);
+	
+	
+	int *pt_su = &su;
+	printf("pt_su adrees: %p\n", pt_su);
+	printf("*pt_su value: %d\n", *pt_su);
+	*pt_su = 222;
+	printf("*pt_su value: %d\n", *pt_su);
+	printf("su value: %d\n", su);
+	test01(*pt_su);
+	test02(pt_su);
+	printf("\n");
+	
+	int a;
+	//const int *pa; //read-only
+	int *pa;
+	pa = &a;
+	*pa = 10;
+	printf("*pa value: %d\n", *pa);
+	printf("*a value: %d\n\n", a);
+	
+	double avg = 99.9;
+	printf("avg sizeof: %dbyte\n", sizeof(avg));
+	//const double *pavg = &avg;
+	double *pavg = &avg;
+	*pavg = 88.88;
+	printf("*pavg value: %.2lf\n", *pavg);
+	printf("avg value: %.2lf\n", avg);
+	
+	return 0;
+}

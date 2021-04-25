@@ -1,0 +1,47 @@
+test26struct5_myhome.c
+#include <stdio.h>
+
+typedef struct car{
+	char *name,*model;
+	int price;
+}Car;
+
+typedef struct computer{
+	char *model;
+	int price;
+	double size;
+}Computer;
+
+typedef struct person{
+	char *name;
+	int age;
+	double height;
+}Person;
+
+typedef struct sweethome{
+	Car c;
+	Computer cp;
+	Person p;
+}Home;
+
+int main(int argc, char **argv)
+{
+	printf("Hello My Sweet home:)\n");
+	
+	Car c = {"volvo", "XC90", 92900};
+	Computer cp = {"galax book flex2", 2840, 13.3};
+	Person p = {"yoon", 24, 160.0};
+	Home h = {c,cp,p};
+	
+	printf("My Car : %s\n", h.c.name);
+	printf("My Car'model : %s\n", h.c.model);
+	printf("My Car'price : %d,000Won\n\n", h.c.price);
+	printf("My Computer : %s\n", h.cp.model);
+	printf("My Computer'price : %d,000Won\n", h.cp.price);
+	printf("My Computer'size : %.2lf\n\n", h.cp.size);
+	printf("My name : %s\n", h.p.name);
+	printf("My age : %d\n", h.p.age);
+	printf("My height : %.2lf\n", h.p.height);
+	
+	return 0;
+}

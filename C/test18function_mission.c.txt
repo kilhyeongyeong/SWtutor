@@ -1,0 +1,24 @@
+test18function_mission.c
+#include <stdio.h>
+#include "test18function_mission.h"
+
+int main(int argc, char **argv)
+{
+	printf("test18function_mission...\n\n");
+	
+	printf("insert result : %d\n\n", insert());
+	
+	printf("update result : %d\n\n", update());
+	
+	printf("eliminate result : %d\n\n", eliminate());
+	
+	printf("selectOne result : %s\n\n", selectOne());
+	
+	printf("selectAll result : %s\n\n", selectAll());
+	
+	printf("searchList result : %s\n\n", searchList("name", "ki"));
+	
+	
+	
+	return 0;
+}

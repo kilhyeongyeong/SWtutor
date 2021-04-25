@@ -1,0 +1,76 @@
+test21pointer_string2.c 
+#include <stdio.h>
+#include <string.h>
+
+#define STRS_ROW_LEN 3
+#define STRS_COL_LEN 10
+
+void test01();
+void test02();
+void test03();
+void test04();
+
+int main(int argc, char **argv)
+{
+	printf("Hello pointer and string2\n");
+	
+	char strs[STRS_ROW_LEN][STRS_COL_LEN] = {"kim", "lee", "yangssem"};
+	printf("strs address : %p\n", strs);
+	
+	//pointer array
+	char *pt_strs[STRS_ROW_LEN];
+	int i;
+	for(i=0; i<STRS_ROW_LEN; i++){
+		pt_strs[i] = &strs[i][0];
+	}
+	
+	printf("pt_strs : %p, %s, %c\n\n", pt_strs, pt_strs[0], *pt_strs[0]);
+	
+	//pointer for multi-array
+	char (*pt_arr)[STRS_COL_LEN] = strs;
+	printf("pt_arr : %p, %s, %c\n\n", pt_arr, pt_arr[0], pt_strs[0][0]);
+	
+	char str[10] = "yangssem";
+	test01(str);
+	
+	char *name = "kim";
+	test02(name);
+	printf("\n");
+	
+	test03(strs);
+	printf("\n");
+	
+	test04(strs);
+	
+	return 0;
+}
+
+void test01(char str[]){
+	printf("test01(char str[])....%s\n", str);
+	//char name[10] = str;
+	char name[10];
+	strcpy(name, str);
+	printf("name : %s\n", name);
+}
+
+void test02(char *pt){
+	printf("test02(char *pt)....%s\n", pt);
+	char *name = pt;
+	printf("name : %s\n", name);
+}
+
+void test03(char strs[STRS_ROW_LEN][STRS_COL_LEN]){
+	printf("test03(char strs[STRS_ROW_LEN][STRS_COL_LEN])....\n");
+	int i;
+	for(i=0; i<STRS_ROW_LEN; i++){
+		printf("name : %s\n", strs[i]);
+	}
+}
+
+void test04(char (*pt)[STRS_COL_LEN]){
+	printf("test04(char (*pt)[STRS_COL_LEN]....\n");	
+	int i;
+	for(i=0; i<STRS_ROW_LEN; i++){
+		printf("name : %s\n", pt[i]);
+	}
+}

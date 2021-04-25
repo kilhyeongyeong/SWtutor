@@ -1,0 +1,70 @@
+test16function3.c
+#include <stdio.h>
+#include <string.h>
+
+#define SUS_LENGTH 4
+#define NAME_LENGTH 10
+
+const int sus_size = 4;
+
+void test01(int x[]);
+void test02(char name[]);
+void test03(char *id);
+
+int main(int argc, char **argv)
+{
+	printf("Hello function3...\n");
+	
+	//int sus[sus_size] = {11,22,33,44}; //error
+	int sus[SUS_LENGTH] = {11,22,33,44}; 
+	test01(sus);
+	
+	char name[NAME_LENGTH] = "yangssem1";
+	test02(name);
+	
+	char *id = "admin";
+	test03(id);
+	
+	return 0;
+}
+
+void test01(int x[]){
+	printf("test01....\n");
+	printf("x address : %p\n", x);
+	
+	int i;
+	for(i=0; i<SUS_LENGTH; i++){
+		printf("%d ", x[i]);
+	}
+	printf("\n");
+}
+
+void test02(char name[]){
+	printf("test02....\n");
+	printf("name address : %p\n", name);
+	
+	int i;
+	for(i=0; i<NAME_LENGTH; i++){
+		printf("[%d]%c ", i,name[i]);
+	}
+	printf("\n");
+	
+	for(i=0; i<strlen(name); i++){
+		printf("[%d]%c ", i,name[i]);
+	}
+	printf("\n");
+	
+	char txt[10];
+	strcpy(txt, name);
+}
+
+void test03(char *id){
+	printf("test02....\n");
+	printf("id address : %p\n", id);
+	printf("id : %s\n", id);
+	id = "lee";
+	printf("id : %s\n", id);
+	
+	char *id2 = id;
+	printf("id2 : %s\n", id2);
+}

@@ -1,0 +1,24 @@
+test08Operator.c 
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+	printf("Hello Operator...\n");
+	
+	//1. (),[], ,, ., ->
+	
+	//2.(cast), *:pointer,
+	
+	//3.+,-,*,/,%
+	
+	//4. <<, >>
+	
+	//5. =,
+	
+	//6. ==, != , >, < ,<=, <=
+	
+	//7. & | ^
+	
+	//8. && ||
+	return 0;
+}

@@ -1,0 +1,32 @@
+test05Score.c
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+	printf("hello Score~~!!!!\n\n");
+	
+	//scanf : name kor eng math total avg 
+	char name[11];
+	int kor, eng, math, total;
+	double avg; 
+	
+	printf("Input name : ");
+	scanf("%s", name);
+	
+	printf("Input kor score : ");
+	scanf("%d", &kor);
+	
+	printf("Input eng score : ");
+	scanf("%d", &eng);
+	
+	printf("Input math score : ");
+	scanf("%d", &math);
+	
+	total = kor+eng+math;
+	avg = total/3.0;
+	
+	printf("name:%s, kor:%d, eng:%d, math:%d, total:%d, avg:%.2lf\n", name, kor, eng, math, total, avg);
+	
+	
+	return 0;
+}

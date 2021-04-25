@@ -1,0 +1,60 @@
+test02type.c
+#include <stdio.h>
+#include <stdbool.h>
+
+int main(int argc, char **argv)
+{
+	printf("c Type\n");
+	
+	int su=100; //2~4byte
+	printf("su: %d\n", su);
+	printf("sizeof(int): %d\n", sizeof(int));
+	printf("sizeof(su): %d\n", sizeof(su));
+	
+	unsigned int su2 = -1;
+	printf("unsigned int su2 : %u\n", su2);
+	printf("sizeof(unsigned int) : %u\n", sizeof(unsigned int));
+	
+	char c = 'a'; //1byte
+	printf("char c: %c\n", c);
+	c=65;
+	printf("char c: %c\n", c);
+	printf("sizeof(char): %c\n", sizeof(char));
+	
+	unsigned char c2='a';
+	printf("unsigned char c2: %u\n", c2);
+	c2=-65;
+	printf("unsigned char c2: %u\n", c2);
+	
+	short s1 = 100; //2byte
+	printf("short s1: %d\n", s1);
+	
+	unsigned short s2 = -100; //2byte
+	printf("unsigned short s2: %u\n", s2);
+	
+	long lng1 = 2200000000; //4byte
+	printf("long lng1: %ld\n", lng1);
+	
+	unsigned long ulng1 = 2200000000; //4byte
+	printf("unsigned long ulng1: %lu\n", ulng1);
+	
+	long long lng2 = 2200000000;
+	printf("long long lng2: %lld\n", lng2);
+	
+	unsigned long long ulng2 = -2200000000;
+	printf("unsigned long long ulng2: %llud\n", ulng2);
+	
+	float f = 3.141592f;
+	printf("float f : %f\n", f);
+	printf("float f : %.2f\n", f);
+	
+	double d = 3.141592;
+	printf("double d: %lf\n", d);
+	printf("double d: %.2lf\n", d);
+	
+	//#include <stdbool.h>
+	bool b = true;
+	printf("bool : %d\n", b);
+	
+	return 0;
+}

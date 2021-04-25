@@ -1,0 +1,48 @@
+test07difine.c
+#include <stdio.h>
+
+#define START 0
+#define LENGTH 10
+#define STEP 2 
+#define sum(arg) ((arg##1)+(arg##2)+(arg##3)) 
+#define xny(arg) ((arg##x)*(arg##y)) 
+#define print_name() printf("yangssem\n")
+#define print_name2(name) printf("%s\n", name)
+
+const int MIN = 0;
+
+int main(int argc, char **argv)
+{
+	printf("hello define...\n");
+	//MIN = 0; read-only error
+	//START = 3; ERROR 
+	
+	int i;
+	for(i=START; i<LENGTH; i++){
+		printf("Hello define...%d\n",i);
+	}
+	printf("======================================\n");
+	for(i=START; i<LENGTH; i+=STEP){
+		printf("Hello define...%d\n",i);
+	}
+	printf("======================================\n");
+	int d1 = 10, d2 = 20, d3 = 30;
+	printf("sum(d) : %d\n", sum(d));
+	
+	int dx = 100, dy = 200;
+	printf("xny(d) : %d\n", xny(d));
+	printf("======================================\n");
+	print_name();
+	char name[] = "kimkimkim";
+	print_name2(name);
+	printf("==================inner define================\n");
+	printf("__DATE__ : %s\n", __DATE__);
+	printf("__TIMESTAMP__ : %s\n", __TIMESTAMP__);
+	printf("__TIME__ : %s\n", __TIME__);
+	printf("__FILE__ : %s\n", __FILE__);
+	printf("__LINE__ : %d\n", __LINE__);
+	
+	
+	
+	return 0;
+}

@@ -1,0 +1,57 @@
+test16function2.c
+#include <stdio.h>
+
+void test01();
+int test02();
+void test03(int x);
+int test04(int x);
+int test05(int x, int y);
+
+int main(int argc, char **argv)
+{
+	printf("Hello function2...\n");
+	
+	test01();
+	printf("\n");
+	
+	int t02 = test02();
+	printf("t02 : %d\n\n", t02);
+	
+	test03(99);
+	printf("\n");
+	
+	int t04 = test04(24);
+	printf("t04 : %d\n\n", t04);
+	
+	int t05 = test05(11, 22);
+	printf("t05 : %d\n\n", t05);
+	
+	
+	return 0;
+}//end main
+
+void test01(){
+	printf("test01()....\n");
+}
+
+int test02(){
+	printf("test02()....\n");
+	return 100;
+}
+
+void test03(int x){
+	printf("test03()....\n");
+	printf("x : %d\n", x);
+}
+
+int test04(int x){
+	printf("test04()....\n");
+	printf("x : %d\n", x);
+	return 1;
+}
+
+int test05(int x, int y){
+	printf("test05()....\n");
+	printf("x : %d, y : %d\n", x, y);
+	return 444;
+}

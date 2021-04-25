@@ -1,0 +1,40 @@
+test13array2.c
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+	printf("Hello array2...\n");
+	
+	int suss[2][3] = {{11,22,33},{44,55,66}};
+	//byte
+	printf("suss address:%p\n",suss);
+	printf("suss[0] address:%p\n",&suss[0]);
+	printf("suss[0][0] address:%p\n",&suss[0][0]);
+	printf("suss[0][0] data:%d\n\n",suss[0][0]);
+	
+	printf("suss array length : %d\n",sizeof(suss));
+	printf("suss[0] array length : %dbyte\n",sizeof(suss[0]));
+	printf("suss item count : %d\n",sizeof(suss)/sizeof(suss[0]));
+	printf("suss[0] item count : %d\n",sizeof(suss[0])/sizeof(int));
+	
+	int i,j;
+	for(i=0; i<sizeof(suss)/sizeof(suss[0]); i++){
+		for(j=0; j<sizeof(suss[0])/sizeof(int); j++){
+			printf("[%d] ", suss[i][j]);
+		}
+		printf("\n");
+	}
+	printf("\n");
+	
+	//{{11.11,22.22,33.33},{77.77,88.88,99.99}}
+	double dsss[2][3] = {{11.11,22.22,33.33},{77.77,88.88,99.99}};
+	
+	for(i=0; i<sizeof(dsss)/sizeof(dsss[0]); i++){
+		for(j=0; j<sizeof(dsss[0])/sizeof(double); j++){
+			printf("[%.2lf] ", dsss[i][j]);
+		}
+		printf("\n");
+	}
+	
+	return 0;
+}

@@ -1,0 +1,72 @@
+test03char.c
+#include <stdio.h>
+#include <string.h>
+
+int main(int argc, char **argv)
+{
+	printf("string char[], char* \n");
+	
+	//char[]
+	char cs[] = "kim"; //'k','i','m',null
+	printf("cs : %s\n", cs);
+	printf("strlen(cs) : %d\n", strlen(cs));
+	printf("sizeof(char): %d\n", sizeof(char));
+	printf("sizeof(cs): %d\n", sizeof(cs));
+	
+	//char[6]
+	char cs2[6] = "hello";
+	printf("cs2 : %s\n", cs2);
+	printf("strlen(cs2) : %d\n", strlen(cs2));
+	
+	//char[6]
+	char cs3[6] = {'h','i','h','i','h'};
+	printf("cs3 : %s\n", cs3);
+	printf("strlen(cs3) : %d\n", strlen(cs3));
+	
+	//strcmp
+	printf("strcmp(cs2,cs3) : %d\n", strcmp(cs2,cs3));
+	printf("strcmp(cs2,hello) : %d\n", strcmp(cs2,"hello"));
+	
+	//strchr >> substring
+	char cs4[] = "abcdefg";
+	printf("cs4 : %s\n", cs4);
+	printf("strlen(cs4) : %d\n", strlen(cs4));
+	printf("strlen(cs4,'d') : %s\n", strchr(cs4,'d'));
+	
+	//copy ********* critical
+	char name1[10] = "yangssem";
+	//char name2[10] = name1; //error
+	char name2[10];
+	strcpy(name2, name1);
+	
+	printf("name1 : %s\n", name1);
+	printf("name2 : %s\n", name2);
+	
+	//strcat >> concat
+	//name2 += " is My Name";
+	strcat(name2, " is My Name");
+	printf("name2 : %s\n", name2);
+	
+	//strtok
+	//char name3[] = "This is my Car" ;
+	char name3[] = "http://aaa.bbb.com" ;
+	printf("name3 : %s\n",strtok(name3, "//"));
+	
+	//strstr
+	char txt[10] = "abcabc";
+	printf("txt : %s\n",strstr(txt, "bc"));
+	printf("strlen(txt) : %d\n", strlen(txt));
+	printf("sizeof(txt): %d\n", sizeof(txt));
+	
+	//char* : pointer
+	//char* txt2 = "aaa"; //OK
+	char *txt2 = "aaa"; //OK
+	txt2 = "yangssem";
+	printf("txt2 : %s\n", txt2);
+	
+	char *txt3 = txt2;
+	printf("txt3 : %s\n", txt3);
+	
+	
+	return 0;
+}
