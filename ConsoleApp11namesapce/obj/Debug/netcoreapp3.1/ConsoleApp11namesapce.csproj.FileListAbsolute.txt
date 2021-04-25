@@ -1,0 +1,12 @@
+D:\visualstudio\ConsoleApp11namesapce\bin\Debug\netcoreapp3.1\ConsoleApp11namesapce.exe
+D:\visualstudio\ConsoleApp11namesapce\bin\Debug\netcoreapp3.1\ConsoleApp11namesapce.deps.json
+D:\visualstudio\ConsoleApp11namesapce\bin\Debug\netcoreapp3.1\ConsoleApp11namesapce.runtimeconfig.json
+D:\visualstudio\ConsoleApp11namesapce\bin\Debug\netcoreapp3.1\ConsoleApp11namesapce.runtimeconfig.dev.json
+D:\visualstudio\ConsoleApp11namesapce\bin\Debug\netcoreapp3.1\ConsoleApp11namesapce.dll
+D:\visualstudio\ConsoleApp11namesapce\bin\Debug\netcoreapp3.1\ConsoleApp11namesapce.pdb
+D:\visualstudio\ConsoleApp11namesapce\obj\Debug\netcoreapp3.1\ConsoleApp11namesapce.AssemblyInfoInputs.cache
+D:\visualstudio\ConsoleApp11namesapce\obj\Debug\netcoreapp3.1\ConsoleApp11namesapce.AssemblyInfo.cs
+D:\visualstudio\ConsoleApp11namesapce\obj\Debug\netcoreapp3.1\ConsoleApp11namesapce.csproj.CoreCompileInputs.cache
+D:\visualstudio\ConsoleApp11namesapce\obj\Debug\netcoreapp3.1\ConsoleApp11namesapce.dll
+D:\visualstudio\ConsoleApp11namesapce\obj\Debug\netcoreapp3.1\ConsoleApp11namesapce.pdb
+D:\visualstudio\ConsoleApp11namesapce\obj\Debug\netcoreapp3.1\ConsoleApp11namesapce.genruntimeconfig.cache
