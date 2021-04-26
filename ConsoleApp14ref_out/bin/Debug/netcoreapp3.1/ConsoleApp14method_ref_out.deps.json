@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "ConsoleApp14method_ref_out/1.0.0": {
+        "runtime": {
+          "ConsoleApp14method_ref_out.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ConsoleApp14method_ref_out/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
