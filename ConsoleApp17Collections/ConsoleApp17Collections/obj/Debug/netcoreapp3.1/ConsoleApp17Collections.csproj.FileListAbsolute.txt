@@ -1,0 +1,13 @@
+C:\Users\user\source\repos\ConsoleApp17Collections\ConsoleApp17Collections\bin\Debug\netcoreapp3.1\ConsoleApp17Collections.exe
+C:\Users\user\source\repos\ConsoleApp17Collections\ConsoleApp17Collections\bin\Debug\netcoreapp3.1\ConsoleApp17Collections.deps.json
+C:\Users\user\source\repos\ConsoleApp17Collections\ConsoleApp17Collections\bin\Debug\netcoreapp3.1\ConsoleApp17Collections.runtimeconfig.json
+C:\Users\user\source\repos\ConsoleApp17Collections\ConsoleApp17Collections\bin\Debug\netcoreapp3.1\ConsoleApp17Collections.runtimeconfig.dev.json
+C:\Users\user\source\repos\ConsoleApp17Collections\ConsoleApp17Collections\bin\Debug\netcoreapp3.1\ConsoleApp17Collections.dll
+C:\Users\user\source\repos\ConsoleApp17Collections\ConsoleApp17Collections\bin\Debug\netcoreapp3.1\ConsoleApp17Collections.pdb
+C:\Users\user\source\repos\ConsoleApp17Collections\ConsoleApp17Collections\obj\Debug\netcoreapp3.1\ConsoleApp17Collections.csprojAssemblyReference.cache
+C:\Users\user\source\repos\ConsoleApp17Collections\ConsoleApp17Collections\obj\Debug\netcoreapp3.1\ConsoleApp17Collections.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\ConsoleApp17Collections\ConsoleApp17Collections\obj\Debug\netcoreapp3.1\ConsoleApp17Collections.AssemblyInfo.cs
+C:\Users\user\source\repos\ConsoleApp17Collections\ConsoleApp17Collections\obj\Debug\netcoreapp3.1\ConsoleApp17Collections.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\ConsoleApp17Collections\ConsoleApp17Collections\obj\Debug\netcoreapp3.1\ConsoleApp17Collections.dll
+C:\Users\user\source\repos\ConsoleApp17Collections\ConsoleApp17Collections\obj\Debug\netcoreapp3.1\ConsoleApp17Collections.pdb
+C:\Users\user\source\repos\ConsoleApp17Collections\ConsoleApp17Collections\obj\Debug\netcoreapp3.1\ConsoleApp17Collections.genruntimeconfig.cache
