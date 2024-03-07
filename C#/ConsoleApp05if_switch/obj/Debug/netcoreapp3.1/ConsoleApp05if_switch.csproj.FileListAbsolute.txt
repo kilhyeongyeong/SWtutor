@@ -1,0 +1,12 @@
+D:\visualstudio\ConsoleApp05if_switch\bin\Debug\netcoreapp3.1\ConsoleApp05if_switch.exe
+D:\visualstudio\ConsoleApp05if_switch\bin\Debug\netcoreapp3.1\ConsoleApp05if_switch.deps.json
+D:\visualstudio\ConsoleApp05if_switch\bin\Debug\netcoreapp3.1\ConsoleApp05if_switch.runtimeconfig.json
+D:\visualstudio\ConsoleApp05if_switch\bin\Debug\netcoreapp3.1\ConsoleApp05if_switch.runtimeconfig.dev.json
+D:\visualstudio\ConsoleApp05if_switch\bin\Debug\netcoreapp3.1\ConsoleApp05if_switch.dll
+D:\visualstudio\ConsoleApp05if_switch\bin\Debug\netcoreapp3.1\ConsoleApp05if_switch.pdb
+D:\visualstudio\ConsoleApp05if_switch\obj\Debug\netcoreapp3.1\ConsoleApp05if_switch.AssemblyInfoInputs.cache
+D:\visualstudio\ConsoleApp05if_switch\obj\Debug\netcoreapp3.1\ConsoleApp05if_switch.AssemblyInfo.cs
+D:\visualstudio\ConsoleApp05if_switch\obj\Debug\netcoreapp3.1\ConsoleApp05if_switch.csproj.CoreCompileInputs.cache
+D:\visualstudio\ConsoleApp05if_switch\obj\Debug\netcoreapp3.1\ConsoleApp05if_switch.dll
+D:\visualstudio\ConsoleApp05if_switch\obj\Debug\netcoreapp3.1\ConsoleApp05if_switch.pdb
+D:\visualstudio\ConsoleApp05if_switch\obj\Debug\netcoreapp3.1\ConsoleApp05if_switch.genruntimeconfig.cache

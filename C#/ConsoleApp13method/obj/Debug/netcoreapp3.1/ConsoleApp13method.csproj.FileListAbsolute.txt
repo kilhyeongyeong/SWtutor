@@ -1,0 +1,13 @@
+D:\visualstudio\ConsoleApp13method\bin\Debug\netcoreapp3.1\ConsoleApp13method.exe
+D:\visualstudio\ConsoleApp13method\bin\Debug\netcoreapp3.1\ConsoleApp13method.deps.json
+D:\visualstudio\ConsoleApp13method\bin\Debug\netcoreapp3.1\ConsoleApp13method.runtimeconfig.json
+D:\visualstudio\ConsoleApp13method\bin\Debug\netcoreapp3.1\ConsoleApp13method.runtimeconfig.dev.json
+D:\visualstudio\ConsoleApp13method\bin\Debug\netcoreapp3.1\ConsoleApp13method.dll
+D:\visualstudio\ConsoleApp13method\bin\Debug\netcoreapp3.1\ConsoleApp13method.pdb
+D:\visualstudio\ConsoleApp13method\obj\Debug\netcoreapp3.1\ConsoleApp13method.csprojAssemblyReference.cache
+D:\visualstudio\ConsoleApp13method\obj\Debug\netcoreapp3.1\ConsoleApp13method.AssemblyInfoInputs.cache
+D:\visualstudio\ConsoleApp13method\obj\Debug\netcoreapp3.1\ConsoleApp13method.AssemblyInfo.cs
+D:\visualstudio\ConsoleApp13method\obj\Debug\netcoreapp3.1\ConsoleApp13method.csproj.CoreCompileInputs.cache
+D:\visualstudio\ConsoleApp13method\obj\Debug\netcoreapp3.1\ConsoleApp13method.dll
+D:\visualstudio\ConsoleApp13method\obj\Debug\netcoreapp3.1\ConsoleApp13method.pdb
+D:\visualstudio\ConsoleApp13method\obj\Debug\netcoreapp3.1\ConsoleApp13method.genruntimeconfig.cache
