@@ -1,0 +1,13 @@
+test01hello.c
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+	printf("hello C\n");
+	printf("hello C : %d, %d\n", 100, 200);
+	printf("hello C : %s\n", "yangssem");
+	printf("hello C : %c, %c\n", 'A', 'Z');
+	printf("hello C : %f\n", 3.141592);
+	printf("hello C : %.2f\n", 3.141592);
+	return 0;
+}

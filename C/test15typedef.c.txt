@@ -1,0 +1,24 @@
+test15typedef.c
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+	printf("Hello typedef....\n");
+	
+	typedef int INT;
+	
+	INT su = 100;
+	printf("INT su : %d\n", su);
+	
+	typedef unsigned int UINT;
+	UINT x=-1;
+	printf("UINT x : %d, %u\n", x, x);
+	
+	typedef const int CON_INT;
+	CON_INT r=-1;
+	printf("REG_INT x : %d\n", r);
+	
+	
+	return 0;
+}
+

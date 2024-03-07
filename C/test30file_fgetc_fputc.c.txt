@@ -1,0 +1,31 @@
+test30file_fgetc_fputc.c
+#include <stdio.h>
+
+#define nil NULL
+
+int main(int argc, char **argv)
+{
+	printf("Hello file io2...fgetc_fputc\n");
+	
+	//input -r : read, output -w : write -a:append
+	FILE *fp_read = fopen("test30.txt", "r");
+	FILE *fp_write = fopen("test30write.txt", "w");
+	
+	if(fp_read==NULL){
+		printf("file not found...\n");
+		return 1;
+	}
+	
+	//char c = fgetc(fp_read);
+	//printf("%c\n",c);
+	
+	char c;
+	while((c = fgetc(fp_read)) != EOF){ //EOF:End Of file
+		printf("%c",c);
+		fputc(c, fp_write);
+	}
+	
+	fclose(fp_write);
+	fclose(fp_read);
+	return 0;
+}

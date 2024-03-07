@@ -1,0 +1,73 @@
+test26struct8_pointer.c
+#include <stdio.h>
+
+typedef struct{
+   int num;
+   char *id;
+   char *pw;
+   char *name;
+   char *tel;
+}Member;
+
+typedef struct{
+   char *car_name;
+   char *car_model;
+   int car_price;
+}Car;
+
+ 
+
+int main(int argc, char **argv)
+
+{
+
+   printf("Hello struct & pointer...\n");
+
+   Member m = {1,"admin","hi1234","kim","02"};
+   printf("%d %s %s %s %s\n",m.num, m.id, m.pw, m.name, m.tel);
+   printf("sizeof(Member):%d byte\n",sizeof(Member));
+   m.num = 22;
+   m.id = "tester";
+   m.pw = "hi4545";
+   m.name = "lee";
+   m.tel = "031";
+   printf("%d %s %s %s %s\n",m.num, m.id, m.pw, m.name, m.tel);
+   printf("===========================\n");
+   
+   Member *pt_m;
+   pt_m = &m;
+   printf("sizeof(pt_m):%d byte\n",sizeof(pt_m));
+   //(*pt_m).num = 99;
+   //(*pt_m).id = "aaaa";
+   //(*pt_m).pw = "aa1234";
+   //(*pt_m).name = "kim";
+   //(*pt_m).tel = "02";
+   pt_m->num = 99;
+   pt_m->id = "bbbb";
+   pt_m->pw = "bb1234";
+   pt_m->name = "yang";
+   pt_m->tel = "010";
+   printf("%d %s %s %s %s\n",m.num, m.id, m.pw, m.name, m.tel);
+   printf("%d %s %s %s %s\n",(*pt_m).num, (*pt_m).id, (*pt_m).pw, (*pt_m).name, (*pt_m).tel);
+   printf("%d %s %s %s %s\n",pt_m->num, pt_m->id, pt_m->pw, pt_m->name, pt_m->tel);
+   printf("===========================\n");
+
+   Car c;
+   //c.car_name = "Ray";
+   //c.car_model  = "top";
+   //c.car_price = 10000000;
+
+   Car *pt_c = &c;
+   //(*pt_c).car_name = "BNW";
+   //(*pt_c).car_model = "750d";
+   //(*pt_c).car_price = 4000000;
+   pt_c->car_name = "OOOO";
+   pt_c->car_model = "A6";
+   pt_c->car_price = 40000000;
+
+   //printf("Car:%s %s %d\n",(*pt_c).car_name,(*pt_c).car_model,(*pt_c).car_price);
+   printf("Car:%s %s %d\n",pt_c->car_name,pt_c->car_model,pt_c->car_price);
+   printf("===========================\n");
+   return 0;
+
+}

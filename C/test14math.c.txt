@@ -1,0 +1,39 @@
+test14math.c
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(int argc, char **argv)
+{
+	printf("Hello math..\n");
+	
+	//gcc -Wall -o test14math test14math.c -lm
+	int x = 2;
+	int y = 8;
+	printf("pow(x,y) : %lf\n", pow(x,y));
+	printf("pow(x,y) : %.lf\n", pow(x,y));
+	printf("pow(x,y) : %.2lf\n", pow(x,y));
+	
+	int h = 100;
+	printf("sqrt(h) : %lf\n\n", sqrt(h));
+	
+	printf("abs(-111) : %d\n", abs(-111));
+	printf("ceil(99.99) : %.2lf\n", ceil(99.99));
+	printf("ceil(-99.99) : %.2lf\n\n", ceil(-99.99));
+	
+	printf("floor(99.99) : %.2lf\n", floor(99.99));
+	printf("floor(-99.99) : %.2lf\n\n", floor(-99.99));
+	
+	printf("round(99.99) : %.2lf\n", round(99.99));
+	printf("round(-99.99) : %.2lf\n\n", round(-99.99));
+	
+	//random : include <stdlib.h>
+	//include <time.h>
+	srand(time(NULL)); //seed random value setup, change from time to time
+	int ran_su = rand();
+	printf("rand() : %d, %d, %d\n", ran_su, ran_su%10, ran_su%100);
+	
+	
+	return 0;
+}

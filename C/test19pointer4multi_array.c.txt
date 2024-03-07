@@ -1,0 +1,53 @@
+test19pointer4multi_array.c
+#include <stdio.h>
+ 
+#define ARR_ROW_LENGTH 2
+#define ARR_COL_LENGTH 3
+
+int main(int argc, char **argv)
+{
+	printf("Hello Pointer and multi-array....\n");
+	
+	int arr[ARR_ROW_LENGTH][ARR_COL_LENGTH] = {
+			{11,22,33}, 
+			{44,55,66}
+		};
+		
+	printf("sizeof(arr) : %d byte\n", sizeof(arr));
+	printf("arr address : %p byte\n", arr);
+	printf("arr[0] address : %p byte\n", arr[0]);
+	printf("&arr[0][0] address : %p byte\n", &arr[0][0]);
+	
+	int (*pt)[ARR_COL_LENGTH] = arr; //&{}, &{}
+	printf("sizeof(arr) : %dbyte\n", sizeof(pt));
+	printf("pt address : %p\n", pt);
+	printf("*pt address : %p\n", *pt);
+	printf("**pt first value : %d\n", **pt);
+	printf("pt[0] address : %p\n", pt[0]);
+	printf("pt[1] address : %p\n", pt[1]);
+	printf("pt[0][0] address : %d\n\n", pt[0][0]);
+	
+	
+	int x,i;
+	for(x=0; x<ARR_ROW_LENGTH; x++){
+		for(i=0; i<ARR_COL_LENGTH; i++){
+			printf("%d ", pt[x][i]);
+		}
+		printf("\n");
+	}
+	printf("\n");
+	
+	printf("pt address : %p\n", pt);
+	printf("*pt address : %p\n", *pt);
+	printf("pt[0] address : %p\n", pt[0]);
+	printf("*(pt+0) address : %p\n", *(pt+0));
+	printf("arr address : %p\n", arr);
+	printf("arr[0] address : %p\n", arr[0]);
+	printf("arr+0 address : %p\n\n", arr+0);
+	
+	printf("**pt first value : %d\n", **pt);
+	printf("pt[0][0] address : %d\n\n", pt[0][0]);
+	
+	
+	return 0;
+}

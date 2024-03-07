@@ -1,0 +1,43 @@
+test16function4.c
+#include <stdio.h>
+
+char test01();
+char* test02();
+char* test03();
+
+int main(int argc, char **argv)
+{
+	printf("Hello function4...\n");
+	
+	char t01 = test01();
+	printf("t01 : %c\n\n",t01);
+	
+	//char t02[10] = test02(); impossible
+	char *t02 = test02();
+	printf("t02 : %p\n", t02);
+	printf("t02 : %s\n\n", t02);
+	
+	
+	char *t03 = test03();
+	printf("t03 : %p\n", t03);
+	printf("t03 : %s\n\n", t03);
+	
+	
+	return 0;
+}
+
+char test01(){
+	printf("test01....\n");
+	return 'S';
+}
+
+char* test02(){
+	printf("test02....\n");
+	char *chr= "test02";
+	return chr;
+}
+
+char* test03(){
+	printf("test03....\n");
+	return "test03";
+}

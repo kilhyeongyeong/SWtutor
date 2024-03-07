@@ -1,0 +1,64 @@
+test26struct.c
+#include <stdio.h>
+#include <string.h>
+#include <stddef.h> //offsetof(type, var)
+
+//all type defalut byte 4byte
+struct Test{
+	int x;
+	double d;
+	char name[10];
+	char *pt_name;
+};
+
+struct Test2{
+	int x;
+	double d;
+};
+
+
+int kor = 10;
+
+int main(int argc, char **argv)
+{
+	printf("Hello struct....\n");
+	
+	//10 >> int a
+	// 11,22,3 >> int sus[]
+	//"kim" >> char *name
+	//"lee" >> char name[10]
+	//10, "kim", 3, 4 >> struct Test t
+	
+	struct Test t;
+	t.x = 10;
+	t.d = 3.14;
+	strcpy(t.name, "yangssem");
+	t.pt_name = "kim";
+	
+	printf("t.x : %d\n", t.x);
+	printf("t.d : %.2lf\n", t.d);
+	printf("t.name : %s\n", t.name);
+	printf("t.pt_name : %s\n", t.pt_name);
+	
+	printf("sizeof(t) : %dbyte\n", sizeof(t)); //28byte
+	printf("sizeof(int) : %dbyte\n", sizeof(int));  //4byte
+	printf("sizeof(struct Test) : %dbyte\n\n", sizeof(struct Test)); //28byte
+	
+	printf("x start index : %d\n", offsetof(struct Test, x));
+	printf("d start index : %d\n", offsetof(struct Test, d));
+	printf("name start index : %d\n", offsetof(struct Test, name));
+	printf("pt_name start index : %d\n\n", offsetof(struct Test, pt_name));
+	
+	struct Test2 t2 = {99, 11.11};
+	printf("t2.x : %d\n", t2.x);
+	printf("t2.d : %.2lf\n\n", t2.d);
+	
+	t2.x = 44;
+	t2.d = 44.44;
+	printf("t2.x : %d\n", t2.x);
+	printf("t2.d : %.2lf\n", t2.d);
+	
+	
+	
+	return 0;
+}

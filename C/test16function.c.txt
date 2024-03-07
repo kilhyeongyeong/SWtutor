@@ -1,0 +1,25 @@
+test16function.c
+#include <stdio.h>
+
+void test01(){
+	printf("outer test01()....\n");
+}
+
+int main(int argc, char **argv)
+{
+	printf("Hello function1...\n");
+	
+	void test01(){
+		printf("local test01()....\n");
+	}
+	test01();
+	
+	
+	void test02(){
+		printf("local test02()....\n");
+	}
+	test02();
+	
+	
+	return 0;
+}

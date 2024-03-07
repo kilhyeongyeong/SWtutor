@@ -1,0 +1,85 @@
+test13array3.c
+#include <stdio.h>
+#include <string.h>
+
+int main(int argc, char **argv)
+{
+	printf("Hello array3...\n");
+	
+	char str[80];
+	printf("str array length : %dbyte\n", sizeof(str));
+	printf("str text length : %d \n", strlen(str));
+	
+	str[0] = 'k';
+	str[1] = 'i';
+	str[2] = 'm';
+	
+	printf("str text length : %d \n", strlen(str));
+	printf("str : %s \n", str);
+	
+	str[0] = 'l';
+	str[1] = 'e';
+	str[2] = 'e';
+	printf("str : %s \n", str);
+	
+	//str = "lee";
+	strcpy(str,"yangssem");
+	printf("str : %s \n\n", str);
+	
+	char strs[2][10] = {{'l','i','n','u','x'},{'k','i','m'}};
+	printf("strs[0] : %s\n", strs[0]);
+	printf("strs[1] : %s\n", strs[1]);
+	
+	printf("strs sizeof : %dbyte\n", sizeof(strs));
+	
+	printf("strs[0] sizeof : %d\n", sizeof(strs[0]));
+	printf("strs[0] strlen : %d\n", strlen(strs[0]));
+	printf("strs[1] sizeof : %d\n", sizeof(strs[1]));
+	printf("strs[1] strlen : %d\n", strlen(strs[1]));
+	
+	int i,j;
+	for(i=0; i<sizeof(strs)/sizeof(strs[0]); i++){
+		for(j=0; j<sizeof(strs[i]); j++){
+			printf("[%d].%c ", j, strs[i][j]);
+		}
+		printf("\n");
+	}
+	printf("\n");
+	
+	for(i=0; i<sizeof(strs)/sizeof(strs[0]); i++){
+		printf("%s\n", strs[i]);
+	}
+	printf("\n");
+	
+	//{"red", "green", "blue"}
+	char colors[3][6] = {{'r','e','d'},{'g','r','e','e','n'},{'b','l','u','e'}};
+	
+	for(i=0; i<sizeof(colors)/sizeof(colors[0]); i++){
+		printf("%s\n", colors[i]);
+		if(strcmp(colors[i], "red")==0) printf("LED red ON\n");
+	}
+	printf("\n");
+	
+	//{"kim", "yangssem", "lee", "park"}
+	//kim >> Hihi~~!! print
+	
+	char names[4][10] = {"kim", "yangssem", "lee", "park"};
+	for(i=0; i<sizeof(names)/sizeof(names[0]); i++){
+		printf("%s : ", names[i]);
+		if(strcmp(names[i], "kim")==0){
+			 printf("Hihi~~!!\n");
+		 }else if(strcmp(names[i], "yangssem")==0){
+			 printf("Good~~!!\n");
+		 }else if(strcmp(names[i], "lee")==0){
+			 printf("Bye~~!!\n");
+		 }else{
+			 printf("Hello~~!!\n");
+		 }
+	}
+	printf("\n");
+	
+	
+	
+	
+	return 0;
+}

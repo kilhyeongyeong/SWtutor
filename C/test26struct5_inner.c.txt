@@ -1,0 +1,60 @@
+test26struct5_inner.c
+#include <stdio.h>
+
+typedef struct contact{
+	char *tel, *email, *addr;
+}Contact;
+
+typedef struct score{
+	int kor, eng, math, total;
+	double avg;
+}Score;
+
+typedef struct student{
+	char *name;
+	Contact ctt;
+	Score s;
+}Student;
+
+int main(int argc, char **argv)
+{
+	printf("Hello struct5....inner\n");
+	
+	Contact ctt;
+	ctt.tel="02";
+	ctt.email = "naver.com";
+	ctt.addr = "seoro";
+	printf("ctt.tel : %s\n", ctt.tel);
+	printf("ctt.email : %s\n", ctt.email);
+	printf("ctt.addr : %s\n\n", ctt.addr);
+	
+	Score sc = {99,88,77, sc.kor + sc.eng + sc.math, sc.total/3};
+
+	printf("sc.kor : %d\n", sc.kor);
+	printf("sc.eng : %d\n", sc.eng);
+	printf("sc.math : %d\n", sc.math);
+	printf("sc.total : %d\n", sc.total);
+	printf("sc.avg : %.2lf\n\n", sc.avg);
+	
+	Student st;
+	st.name = "lee";
+	st.ctt = ctt;
+	//st.ctt = {"aaa","bbb","ccc"};error
+	st.s = sc;
+	printf("st.name : %s\n", st.name);
+	printf("st.ctt.tel : %s\n", st.ctt.tel);
+	printf("st.ctt.email : %s\n", st.ctt.email);
+	printf("st.ctt.addr : %s\n", st.ctt.addr);
+	
+	st.s.kor = 87;
+	st.s.total = st.s.kor + st.s.eng + st.s.math;
+	st.s.avg = st.s.total/3;
+	printf("st.s.kor : %d\n", st.s.kor);
+	printf("st.s.eng : %d\n", st.s.eng);
+	printf("st.s.math : %d\n", st.s.math);
+	printf("st.s.total : %d\n", st.s.total);
+	printf("st.s.avg : %.2lf\n", st.s.avg);
+	
+	
+	return 0;
+}

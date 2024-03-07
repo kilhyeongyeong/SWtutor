@@ -1,0 +1,34 @@
+test26struct4_time.c
+#include <stdio.h>
+#include <time.h>
+
+void printLocaltime();
+void printTime_now();
+
+int main(int argc, char **argv)
+{
+	printf("Hello time : time_t, time_now, sturct tm\n");
+	
+	printLocaltime();
+	printf("\n");
+	
+	printTime_now();
+	
+	return 0;
+}
+
+void printLocaltime(){
+	struct tm *pt_time;
+	time_t time_now;
+	time(&time_now);
+	pt_time = localtime(&time_now);
+	printf("time_now : %ld\n", time_now);
+	printf("asctime(pt_time) : %s\n", asctime(pt_time));
+	
+}
+
+void printTime_now(){
+	time_t time_now;
+	time_now = time(NULL);
+	printf("time_now : %ld\n", time_now);
+}

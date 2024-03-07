@@ -1,0 +1,31 @@
+test17header.h
+int su = 100;
+
+void test01(){
+	printf("test01()....\n");
+}
+
+void test02(char name[]){ //10byte
+	printf("test02()....\n");
+	printf("name : %s\n", name);
+}
+
+void test03(char *name){ //4byte
+	printf("test03()....\n");
+	printf("name : %s\n", name);
+}
+
+char* test04(){ //4byte
+	printf("test04()....\n");
+	char *txt = "hello";
+	return txt;
+}
+
+int test05(){
+		return 100;
+}
+
+int* test06(){
+	static int arr[6] = {11,22,33,44,55,66};
+	return arr;
+}

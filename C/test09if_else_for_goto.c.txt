@@ -1,0 +1,46 @@
+test09if_else_for_goto.c
+#include <stdio.h>
+#include <stdbool.h>
+
+int main(int argc, char **argv)
+{
+	printf("if else for goto\n");
+	bool b = true;
+	if(b){
+		printf("if...1\n");
+	}
+	if(1){
+		printf("if...2\n");
+	}
+	if(0){
+		printf("if...3\n");
+	}else{
+		printf("else....3\n");
+	}
+	if(0){
+		printf("if...4-0\n");
+	}else if(5==5){
+		printf("else if...4-1\n");
+	}else if(0){
+		printf("else if...4-2\n");
+	}else{
+		printf("else...4-0\n");
+	}
+	
+	int x,i;
+	for(x=0; x<3; x++){
+		for(i=0; i<10; i++){
+			//if(i==5) break;
+			//if(i==5) continue;
+			//if(i==5) goto EXIT;
+			if(x==1 && i==5) goto EXIT;
+			printf("%d ",i);
+		}
+		printf("\n");
+	}
+	
+	
+	printf("end for\n");
+	EXIT : printf("EXIT\n");
+	return 0;
+}

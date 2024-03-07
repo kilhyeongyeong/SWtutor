@@ -1,0 +1,95 @@
+test26struct7_function.c
+#include <stdio.h>
+
+#define MEMBER_ARR_LEN 2
+#define CAR_ARR_LEN 3
+
+typedef struct member{
+	int num;
+	char *id; //4byte
+	//char id[10]; 12byte
+	char *pw;
+	char *name;
+	char *tel;
+}Member;
+
+typedef struct car{
+	char *name,*model;
+	int price;
+}Car;
+
+void test01(Member m);
+void test02(Car c);
+void test03(Member m[MEMBER_ARR_LEN]);
+void test04(Car c[CAR_ARR_LEN]);
+
+Car test05();
+Member test06();
+int main(int argc, char **argv)
+{
+	printf("Hello struct & function...\n\n");
+	
+	Member m = {0, "idid", "pwpw", "namename", "teltel"};
+	test01(m);
+	printf("\n");
+	
+	Member ms[MEMBER_ARR_LEN] = {m,m};
+	test03(ms);
+	printf("\n");
+	
+	Car c = {"namena!:)", "modelmodel", 10000};
+	test02(c);
+	printf("\n");
+	
+	Car cs[CAR_ARR_LEN] = {c,c,c};
+	test04(cs);
+	printf("\n");
+	
+	Car result_car = test05();
+	printf("%s, %s, %d\n", result_car.name, result_car.model, result_car.price);
+	printf("\n");
+	
+	Member return_mem = test06();
+	printf("%d. %s, %s, %s, %s\n", return_mem.num, return_mem.id, return_mem.pw, return_mem.name, return_mem.tel);
+	printf("\n");
+	
+	return 0;
+}
+
+void test01(Member m){
+	printf("test01()....\n");
+	printf("sizeof(Member) : %dbyte\n", sizeof(Member));
+	printf("%d. %s, %s, %s, %s\n", m.num, m.id, m.pw, m.name, m.tel);
+}
+
+void test02(Car c){
+	printf("test02()....\n");
+	printf("sizeof(Car) : %dbyte\n", sizeof(Car));
+	printf("%s, %s, %d\n", c.name, c.model, c.price);
+}
+
+void test03(Member m[MEMBER_ARR_LEN]){
+	printf("test03()....\n");
+	int i;
+	for(i=0; i<MEMBER_ARR_LEN; i++){
+		printf("%d. %s, %s, %s, %s\n", m[i].num, m[i].id, m[i].pw, m[i].name, m[i].tel);
+	}
+}
+
+void test04(Car c[CAR_ARR_LEN]){
+	printf("test04()....\n");
+	int i;
+	for(i=0; i<CAR_ARR_LEN; i++){
+		printf("%d. %s, %s, %d\n", i+1, c[i].name, c[i].model, c[i].price);
+	}
+}
+
+Car test05(){
+	Car c = {"nana!:)", "momo", 5000};
+	return c;
+}
+
+Member test06(){
+	Member m = {100, "oh", "nana", "ohna", "yaho"};
+	return m;
+}

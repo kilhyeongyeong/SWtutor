@@ -1,0 +1,101 @@
+test26struct6_myhome.c
+#include <stdio.h>
+
+typedef struct car{
+	char *name,*model;
+	int price;
+}Car;
+
+typedef struct computer{
+	char *model;
+	int price;
+	double size;
+}Computer;
+
+typedef struct person{
+	char *name;
+	int age;
+	double height;
+}Person;
+
+typedef struct sweethome{
+	Car c;
+	Computer cp;
+	Person p;
+}Home;
+
+int main(int argc, char **argv)
+{
+	printf("Hello My Sweet home:)\n\n");
+	
+	
+	printf("========Car========\n");
+	Car c = {"volvo", "XC90", 92900};
+	Car c2 = {"volvo2", "XC80", 89800};
+	Car cs[2] = {c, c2};
+	
+	int i;
+	for(i=0; i<sizeof(cs)/sizeof(Car); i++){
+		printf("%d.\n", i+1);
+		printf("My Car : %s\n", cs[i].name);
+		printf("My Car'model : %s\n", cs[i].model);
+		printf("My Car'price : %d,000Won\n\n", cs[i].price);
+	}
+	
+	printf("========computer========\n");
+	Computer cp = {"galax book flex2", 2840, 13.3};
+	Computer cp2 = {"galax book flex", 2630, 13.3};
+	Computer cps[2] = {cp, cp2};
+	
+	for(i=0; i<sizeof(cps)/sizeof(Computer); i++){
+		printf("%d.\n", i+1);
+		printf("My Computer : %s\n", cps[i].model);
+		printf("My Computer'price : %d,000Won\n", cps[i].price);
+		printf("My Computer'size : %.2lf\n\n", cps[i].size);
+	}
+	
+	printf("========Person========\n");
+	Person p = {"yoon", 24, 160.0};
+	Person p2 = {"hong", 25, 173.5};
+	Person ps[2] = {p, p2};
+	
+	for(i=0; i<sizeof(ps)/sizeof(Person); i++){
+		printf("%d.\n", i+1);
+		printf("My name : %s\n", ps[i].name);
+		printf("My age : %d\n", ps[i].age);
+		printf("My height : %.2lf\n\n", ps[i].height);
+	}
+	
+	printf("========Home========\n");
+	Home h = {c,cp,p};
+	Home h2 = {c2,cp2,p2};
+	Home hs[2] = {h, h2};
+	
+	/*
+	printf("My Car : %s\n", h.c.name);
+	printf("My Car'model : %s\n", h.c.model);
+	printf("My Car'price : %d,000Won\n\n", h.c.price);
+	printf("My Computer : %s\n", h.cp.model);
+	printf("My Computer'price : %d,000Won\n", h.cp.price);
+	printf("My Computer'size : %.2lf\n\n", h.cp.size);
+	printf("My name : %s\n", h.p.name);
+	printf("My age : %d\n", h.p.age);
+	printf("My height : %.2lf\n", h.p.height);
+	*/
+	
+	for(i=0; i<sizeof(hs)/sizeof(Home); i++){
+		printf("%d.\n", i+1);
+		printf("My Car : %s\n", hs[i].c.name);
+		printf("My Car'model : %s\n", hs[i].c.model);
+		printf("My Car'price : %d,000Won\n", hs[i].c.price);
+		printf("My Computer : %s\n", hs[i].cp.model);
+		printf("My Computer'price : %d,000Won\n", hs[i].cp.price);
+		printf("My Computer'size : %.2lf\n", hs[i].cp.size);
+		printf("My name : %s\n", hs[i].p.name);
+		printf("My age : %d\n", hs[i].p.age);
+		printf("My height : %.2lf\n\n", hs[i].p.height);
+	}
+	
+	
+	return 0;
+}

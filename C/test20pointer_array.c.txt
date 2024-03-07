@@ -1,0 +1,37 @@
+test20pointer_array.c
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+	printf("Hello address array >> pointer array\n");
+	
+	int sus[3] = {11,22,33};
+	printf("sus address : %p\n", sus);
+	printf("&sus[0] address : %p\n", &sus[0]);
+	printf("sus+0 address : %p\n", &sus+0);
+	int *pt = sus;
+	printf("pt address : %p\n", pt);
+	printf("\n");
+	
+	printf("pt[0] value : %d\n", pt[0]);
+	printf("*(pt+0) value : %d\n", *(pt+0));
+	
+	//(*pt)[col_len] = multi-array
+	
+	int a=10, b=20, c=30, d=40;
+	printf("%d, %d, %d, %d\n", a, b, c, d);
+	printf("%p, %p, %p, %p\n", &a, &b, &c, &d);
+	
+	int *arr_pt[4];
+	arr_pt[0] = &a;
+	arr_pt[1] = &b;
+	arr_pt[2] = &c;
+	arr_pt[3] = &d;
+	printf("arr_pt[0] : %p, *arr_pt[0] : %d\n\n", arr_pt[0], *arr_pt[0]);
+	int i;
+	for(i=0; i<4; i++){
+		printf("arr_pt[%d] : %p, *arr_pt[%d] : %d\n",i, arr_pt[i], i, *arr_pt[i]);
+	}
+	
+	return 0;
+}

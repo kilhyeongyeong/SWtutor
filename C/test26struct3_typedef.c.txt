@@ -1,0 +1,59 @@
+test26struct3_typedef.c
+#include <stdio.h>
+#include <time.h>
+
+typedef struct Student{
+	char *name;
+	int kor;
+	int eng;
+	int math;
+	int total;
+	double avg;
+}ST;
+
+struct{
+	int num;
+	char *name;
+}t;
+
+struct Member{
+	int num;
+	char *id; //4byte
+	//char id[10]; 12byte
+	char *pw;
+	char *name;
+	char *tel;
+	time_t time;
+};
+
+int main(int argc, char **argv)
+{
+	printf("Hello struct3....typedef\n");
+
+	ST st;
+	printf("sizeof(st) : %d\n",sizeof(st));
+	printf("sizeof(ST) : %d\n\n",sizeof(ST));
+	
+	t.num = 99;
+	t.name = "lee";
+	printf("t.num : %d\n", t.num);
+	printf("t.name : %s\n\n", t.name);
+	
+	typedef struct Member MEM;
+	printf("sizeof(Mem) : %d\n",sizeof(MEM));
+	MEM m = {1,"admin", "hi1234", "kim", "02"};
+	printf("m.num : %d\n", m.num);
+	printf("m.id : %s\n", m.id);
+	printf("m.pw : %s\n", m.pw);
+	printf("m.name : %s\n", m.name);
+	printf("m.tel : %s\n", m.tel);
+	
+	MEM *pt_time;
+	time(&m.time);
+	pt_time = localtime(&m.time);
+	printf("m.time : %ld\n", m.time);
+	printf("m.time : %p\n", pt_time);
+	printf("asctime(pt_time) : %s\n", asctime(pt_time));
+	
+	return 0;
+}

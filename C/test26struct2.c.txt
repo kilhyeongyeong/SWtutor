@@ -1,0 +1,50 @@
+test26struct2.c
+#include <stdio.h>
+
+struct Student{
+	char *name;
+	int kor;
+	int eng;
+	int math;
+	int total;
+	double avg;
+};
+
+struct Member{
+	int num;
+	char id[10];
+	char *pw;
+	char *name;
+	char *tel;
+};
+
+int main(int argc, char **argv)
+{
+	printf("Hello struct2....\n");
+	
+	struct Student st;
+	printf("sizeof(struct Student) : %d\n",sizeof(struct Student));
+	st.name = "kim";
+	st.kor = 99;
+	st.eng = 88;
+	st.math = 77;
+	st.total = st.kor + st.eng + st.math;
+	st.avg = st.total/3;
+	printf("st.name : %s\n",st.name);
+	printf("st.kor : %d\n",st.kor);
+	printf("st.eng : %d\n",st.eng);
+	printf("st.math : %d\n",st.math);
+	printf("st.total : %d\n",st.total);
+	printf("st.avg : %.2lf\n\n",st.avg);
+	
+	struct Member m = {1,"admin", "hi1234", "kim", "02"};
+	printf("sizeof(struct Member ) : %d\n",sizeof(struct Member ));
+	printf("m.num : %d\n", m.num);
+	printf("m.id : %s\n", m.id);
+	printf("m.pw : %s\n", m.pw);
+	printf("m.name : %s\n", m.name);
+	printf("m.tel : %s\n", m.tel);
+	
+	
+	return 0;
+}

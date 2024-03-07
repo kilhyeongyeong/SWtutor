@@ -1,0 +1,56 @@
+test29Sort.c
+#include <stdio.h>
+
+typedef struct{
+   char *name;
+   char *model;
+   int price;
+}Car;
+
+int main(int argc, char **argv)
+{
+	printf("Hello Sort...\n");
+	
+	int arr[3] = {88,22,55};
+	//bubble sort : for[0~2] ~for[x+1~3], if >> move
+	int x, i;
+	for(x=0; x<3; x++){
+		for(i=x+1; i<3; i++){
+			if(arr[x]>arr[i]){
+				int tmp;
+				tmp = arr[x];
+				arr[x] = arr[i];
+				arr[i] = tmp;
+			}
+		}
+	}
+	
+	for(i=0; i<3; i++){
+		printf("%d ", arr[i]);
+	}
+	printf("\n");
+	
+	Car c1 = {"BMWW", "520d", 880000000};
+	Car c2 = {"OOOO", "aw9", 220000000};
+	Car c3 = {"Ray", "top2", 550000000};
+	
+	Car cs[3] = {c1,c2,c3};
+	
+	int j;
+	for(i=0; i<3; i++){
+		for(j=i+1; j<3; j++){
+			if(cs[i].price > cs[j].price){
+				Car tmp = cs[i];
+				cs[i] = cs[j];
+				cs[j] = tmp;
+			}
+		}
+	}
+	
+	for(i=0; i<3; i++){
+		printf("%d. %s, %s, %d\n", i+1, cs[i].name, cs[i].model, cs[i].price);
+	}
+	
+	
+	return 0;
+}

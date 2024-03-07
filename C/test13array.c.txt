@@ -1,0 +1,49 @@
+test13array.c
+#include <stdio.h>
+#include <string.h>
+
+int main(int argc, char **argv)
+{
+	printf("Hello....Array....\n");
+	
+	char name[9] = {'y','a','n','g','s','s','e','m'};
+	//char name[9] = "yangssem";
+	//char *name = "yangssem";
+	printf("name text length : %d\n", strlen(name));
+	printf("name array length : %d\n", sizeof(name));
+	printf("name : %s\n", name);
+	
+	int i;
+	for(i=0; i<strlen(name); i++){
+		printf("%c ",name[i]);
+	}
+	printf("\n\n");
+	
+	int su = 100;
+	printf("su : %d\n", su);
+	printf("su : %p\n\n", &su); //address
+	
+	int sus[5] = {11,22,33,44,55};
+	printf("sus : %p\n",sus); //%p : address
+	printf("sus[0] : %p\n",&sus[0]); //%p : address
+	printf("sus array length : %dbyte \n", sizeof(sus));//5*4=20byte
+	printf("sus item count : %dbyte \n",sizeof(sus)/sizeof(int));
+	for(i=0; i<sizeof(sus)/sizeof(int); i++){
+		printf("sus : %d\n", sus[i]);
+	}
+	printf("\n\n");
+	
+	
+	double ds[5] = {11,22,33,44,55.5};
+	printf("ds : %p\n",ds); //%p : address
+	printf("ds array length : %dbyte \n", sizeof(ds));
+	printf("ds item count : %dbyte \n\n",sizeof(ds)/sizeof(double));
+	for(i=0; i<sizeof(ds)/sizeof(double); i++){
+		printf("ds : %.2lf\n", ds[i]);
+	}
+	printf("\n\n");
+	
+	
+	
+	return 0;
+}

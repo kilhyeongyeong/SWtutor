@@ -1,0 +1,201 @@
+test23sqlite3.c
+#include <stdio.h>
+#include <sqlite3.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main(int argc, char **argv)
+{
+	printf("Hello sqlite3...\n");
+	
+	int result_open = 0;
+	sqlite3 *db;
+	result_open = sqlite3_open("test23.db", &db);
+	
+	printf("result_open : %d...\n", result_open);
+	if(!result_open){
+		printf("sqlite3_open successfully! \n");
+	}
+	
+	sqlite3_stmt *stmt = NULL;
+	
+	//1. table create
+	const char *sql_create_table = "create table if not exists test(num integer primary key autoincrement, name text, age integer, wdate default CURRENT_TIMESTAMP);";
+	
+	int result_create_table = sqlite3_prepare_v2(db, sql_create_table, -1, &stmt, NULL); //SQLITE_OK : 0 return
+	printf("%d, %d\n", result_create_table, SQLITE_OK);
+	if(result_create_table==SQLITE_OK){
+		int step = sqlite3_step(stmt);//SQLITE_DONE : 101 return
+		printf("%d, %d\n", step, SQLITE_DONE);
+		if(step==SQLITE_DONE){
+			printf("create table successfully! \n");
+			printf("sqlite3 test23.db \".tables\"\n");
+			//system("sqlite3 test23.db \".tables\"\n");
+		}
+	}
+	//------------------------------------------------------------------
+	/*
+	printf("=========================insert===========================\n");
+	//2.table insert
+	const char *sql_insert = "insert into test(name, age) values(?, ?);";
+	int result_insert = sqlite3_prepare_v2(db, sql_insert, -1, &stmt, NULL);
+	printf("%d, %d\n", result_insert, SQLITE_OK);
+	if(result_insert == SQLITE_OK){
+		sqlite3_bind_text(stmt, 1, "lee33", -1, SQLITE_TRANSIENT);
+		sqlite3_bind_int(stmt, 2, 33);
+		
+		int step = sqlite3_step(stmt);
+		printf("%d, %d\n", step, SQLITE_DONE);
+		if(step==SQLITE_DONE){
+			printf("insert successfully! \n");
+			printf("sqlite3 test23.db \"select * from test\"\n");
+			//system("sqlite3 test23.db \"select * from test\"\n");
+		}
+	}
+	*/
+	//------------------------------------------------------------------
+	/*
+	printf("=========================update===========================\n");
+	//3.table update
+	const char *sql_update = "update test set name=?, age=? where num=?;";
+	int result_update = sqlite3_prepare_v2(db, sql_update, -1, &stmt, NULL);
+	printf("%d, %d\n", result_update, SQLITE_OK);
+	if(result_update == SQLITE_OK){
+		sqlite3_bind_text(stmt, 1, "han", -1, SQLITE_TRANSIENT);
+		sqlite3_bind_int(stmt, 2, 24);
+		sqlite3_bind_int(stmt, 3, 1);
+		
+		int step = sqlite3_step(stmt);
+		printf("%d, %d\n", step, SQLITE_DONE);
+		if(step==SQLITE_DONE){
+			printf("update successfully! \n");
+			printf("sqlite3 test23.db \"select * from test\"\n");
+			system("sqlite3 test23.db \"select * from test\"\n");
+		}
+	}
+	*/
+	//------------------------------------------------------------------
+	/*
+	printf("=========================delete===========================\n");
+	//4.table delete
+	const char *sql_delete = "delete from test where num=?;";
+	int result_delete = sqlite3_prepare_v2(db, sql_delete, -1, &stmt, NULL);
+	printf("%d, %d\n", result_delete, SQLITE_OK);
+	if(result_delete == SQLITE_OK){
+		sqlite3_bind_int(stmt, 1, 2);
+		
+		int step = sqlite3_step(stmt);
+		printf("%d, %d\n", step, SQLITE_DONE);
+		if(step==SQLITE_DONE){
+			printf("delete successfully! \n");
+			printf("sqlite3 test23.db \"select * from test\"\n");
+			//system("sqlite3 test23.db \"select * from test\"\n");
+		}
+	}
+	*/
+	printf("=========================selectAll===========================\n");
+	//5.select All
+	const char *sql_selectAll = "select * from test;";
+	int result_selectAll = sqlite3_prepare_v2(db, sql_selectAll, -1, &stmt, NULL);
+	printf("%d, %d\n", result_selectAll, SQLITE_OK);
+	if(result_selectAll == SQLITE_OK){
+		while(sqlite3_step(stmt) == SQLITE_ROW){
+			printf("%d ", (int)sqlite3_column_int(stmt, 0));
+			printf("%s ", (char*)sqlite3_column_text(stmt, 1));
+			printf("%d ", (int)sqlite3_column_int(stmt, 2));
+			printf("%s\n", (char*)sqlite3_column_text(stmt, 3));
+		}
+		
+	}
+	
+	printf("=========================selectOne===========================\n");
+	//6.select One
+	const char *sql_selectOne = "select * from test where num=?;";
+	int result_selectOne = sqlite3_prepare_v2(db, sql_selectOne, -1, &stmt, NULL);
+	printf("%d, %d\n", result_selectOne, SQLITE_OK);
+	if(result_selectOne == SQLITE_OK){
+		sqlite3_bind_int(stmt, 1, 5);
+		
+		while(sqlite3_step(stmt) == SQLITE_ROW){
+			printf("%d ", (int)sqlite3_column_int(stmt, 0));
+			printf("%s ", (char*)sqlite3_column_text(stmt, 1));
+			printf("%d ", (int)sqlite3_column_int(stmt, 2));
+			printf("%s\n", (char*)sqlite3_column_text(stmt, 3));
+		}
+		
+	}
+	
+	printf("=========================searchList===========================\n");
+	//7.searchList
+	char searchKey[10] = "age";
+	char *searchWord = "%2%";
+	
+	if(strcmp(searchKey, "name")==0){
+		const char *sql_searchList_name = "select * from test where name like ?;";
+		printf("%s\n", sql_searchList_name);
+		
+		int result_searchList_name = sqlite3_prepare_v2(db, sql_searchList_name, -1, &stmt, NULL);
+		printf("%d, %d\n", result_searchList_name, SQLITE_OK);
+		if(result_searchList_name == SQLITE_OK){
+			sqlite3_bind_text(stmt, 1, searchWord, -1, SQLITE_TRANSIENT);
+			
+			while(sqlite3_step(stmt) == SQLITE_ROW){
+				printf("%d ", (int)sqlite3_column_int(stmt, 0));
+				printf("%s ", (char*)sqlite3_column_text(stmt, 1));
+				printf("%d ", (int)sqlite3_column_int(stmt, 2));
+				printf("%s\n", (char*)sqlite3_column_text(stmt, 3));
+			}
+			
+		}
+	}else{
+		const char *sql_searchList_age = "select * from test where age like ?;";
+		printf("%s\n", sql_searchList_age);
+		
+		int result_searchList_age = sqlite3_prepare_v2(db, sql_searchList_age, -1, &stmt, NULL);
+		printf("%d, %d\n", result_searchList_age, SQLITE_OK);
+		if(result_searchList_age == SQLITE_OK){
+			sqlite3_bind_text(stmt, 1, searchWord, -1, SQLITE_TRANSIENT);
+			
+			while(sqlite3_step(stmt) == SQLITE_ROW){
+				printf("%d ", (int)sqlite3_column_int(stmt, 0));
+				printf("%s ", (char*)sqlite3_column_text(stmt, 1));
+				printf("%d ", (int)sqlite3_column_int(stmt, 2));
+				printf("%s\n", (char*)sqlite3_column_text(stmt, 3));
+			}
+			
+		}
+	}
+	
+	printf("=========================searchList_test===========================\n");
+	//7.searchList_test
+	char *searchKey_test = "name";
+	char *searchWord_test = "%k%";
+	
+	char searchList_test[100] = "select * from test where ";
+	strcat(searchList_test,searchKey_test);
+	strcat(searchList_test," like ?;");
+	printf("%s\n", searchList_test);
+	
+	char *sql_searchList_test = malloc(sizeof(char) * 50);
+	strcpy(sql_searchList_test, searchList_test);
+
+	int result_searchList_test = sqlite3_prepare_v2(db, sql_searchList_test, -1, &stmt, NULL);
+	printf("%d, %d\n", result_searchList_test, SQLITE_OK);
+	if(result_searchList_test == SQLITE_OK){
+		sqlite3_bind_text(stmt, 1, searchWord_test, -1, SQLITE_TRANSIENT);
+		
+		while(sqlite3_step(stmt) == SQLITE_ROW){
+			printf("%d ", (int)sqlite3_column_int(stmt, 0));
+			printf("%s ", (char*)sqlite3_column_text(stmt, 1));
+			printf("%d ", (int)sqlite3_column_int(stmt, 2));
+			printf("%s\n", (char*)sqlite3_column_text(stmt, 3));
+		}
+		
+	}
+	
+	
+	
+	sqlite3_finalize(stmt);
+	sqlite3_close(db);
+	return 0;
+}

@@ -1,0 +1,52 @@
+test27union.c
+#include <stdio.h>
+
+struct Test{
+	int num;
+	double avg;
+};
+
+union Score{
+	int num;
+	double avg;
+};
+
+union Names{ //byte += 4byte
+	char a_name[7]; //7byte;
+	char b_name[8]; //8byte;
+	char c_name[9]; //12byte;
+	char d_name[16]; //16byte;
+	char e_name[17]; //20byte;
+	double avg; //8byte;
+};
+
+union Names2{ //byte += 4byte
+	char a_name[3]; //3byte;
+	char b_name[7]; //8byte;
+	char c_name[9]; //12byte;
+	int su; //4byte;
+};
+
+int main(int argc, char **argv)
+{
+	printf("Hello union....\n");
+	
+	//struct Test t = {33,44.44};
+	struct Test t = {.avg=3.33, .num=11};
+	printf("sizeof(struct Test) : %dbyte\n",sizeof(struct Test));
+	printf("%d, %.2lf\n",t.num, t.avg);
+	
+	union Score s = {.avg=3.33, .num=11};
+	//s.num = 99;
+	//s.avg = 33.33;
+	printf("sizeof(union Score) : %dbyte\n",sizeof(union Score));
+	printf("union Score : %d, %.2lf\n",s.num, s.avg);
+	
+	union Names ns;
+	printf("sizeof(ns) : %dbyte\n",sizeof(ns));
+	
+	union Names2 ns2;
+	printf("sizeof(ns2) : %dbyte\n",sizeof(ns2));
+	
+	return 0;
+}

@@ -1,0 +1,53 @@
+test22pointer_pointer2.c  
+#include <stdio.h>
+#include <stdlib.h>
+
+#define ROW 2
+#define COL 3
+
+void test01();
+
+int main(int argc, char **argv)
+{
+	printf("Hello pointer for pointer2\n\n");
+	
+	int arrs[ROW][COL] = {{11,22,33}, {44,55,66}};
+	
+	//1.
+	int(*arr)[COL] = arrs;
+	printf("arr : %p\n", arr);
+	test01(arrs);
+	printf("\n");
+	
+	//2.	
+	int *pt = (int *)arrs;
+	printf("pt : %p\n", pt);
+	//printf("pt[0] : %d, *(pt+0) : %d\n", pt[0], *(pt+0));
+	int i;
+	for(i=0; i<ROW*COL; i++){
+		printf("pt[%d] : %d, *(pt+%d) : %d\n", i, pt[i], i, *(pt+i));
+	}
+	
+	printf("\n");
+	
+	int **ppt;
+	ppt = (int **)malloc(2*3*sizeof(int*)); //{0,0,...24byte}
+	ppt[0] = (int *)malloc(3*sizeof(int*)); //{0,0,0,,,12byte}
+	ppt[1] = (int *)malloc(3*sizeof(int*));
+	printf("ppt : %p\n", ppt);
+	printf("ppt[0] : %p\n", ppt[0]);
+	printf("ppt[1] : %p\n", ppt[1]);
+	printf("ppt[0][0] : %d\n", ppt[0][0]);
+	printf("ppt[1][0] : %d\n", ppt[1][0]);
+	
+	//free(ppt);
+	printf("ppt[0][0] : %d\n", ppt[0][0]);
+	printf("ppt[1][0] : %d\n", ppt[1][0]);
+
+	
+	return 0;
+}
+
+void test01(int(*arr)[COL]){
+	printf("test01(int (*arr)[3])...%p\n", arr);
+}

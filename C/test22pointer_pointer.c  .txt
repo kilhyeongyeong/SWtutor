@@ -1,0 +1,33 @@
+test22pointer_pointer.c  
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+	printf("Hello pointer for pointer\n\n");
+	
+	int x = 10;
+	printf("x : %d\n\n", x);
+	
+	int *pt = &x;
+	printf("pt : %p\n", pt);
+	printf("*pt : %d\n\n", *pt);
+	
+	*pt = 50;
+	printf("x : %d\n", x);
+	printf("*pt : %d\n\n", *pt);
+	
+	printf("&pt : %p\n", &pt);
+	int **ppt = &pt;
+	printf("ppt : %p\n", ppt);
+	printf("**ppt : %d\n", **ppt);
+	**ppt = 100;
+	printf("**ppt : %d\n", **ppt);
+	printf("*pt : %d\n", *pt);
+	printf("x : %d\n\n", x);
+	
+	int ***pppt = &ppt;
+	printf("pppt : %p\n", pppt);
+	printf("***pppt : %d\n", ***pppt);
+	
+	return 0;
+}
