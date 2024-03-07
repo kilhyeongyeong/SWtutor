@@ -1,0 +1,13 @@
+C:\Users\julso\source\repos\ConsoleApp19Lambda\bin\Debug\netcoreapp3.1\ConsoleApp19Lambda.exe
+C:\Users\julso\source\repos\ConsoleApp19Lambda\bin\Debug\netcoreapp3.1\ConsoleApp19Lambda.deps.json
+C:\Users\julso\source\repos\ConsoleApp19Lambda\bin\Debug\netcoreapp3.1\ConsoleApp19Lambda.runtimeconfig.json
+C:\Users\julso\source\repos\ConsoleApp19Lambda\bin\Debug\netcoreapp3.1\ConsoleApp19Lambda.runtimeconfig.dev.json
+C:\Users\julso\source\repos\ConsoleApp19Lambda\bin\Debug\netcoreapp3.1\ConsoleApp19Lambda.dll
+C:\Users\julso\source\repos\ConsoleApp19Lambda\bin\Debug\netcoreapp3.1\ConsoleApp19Lambda.pdb
+C:\Users\julso\source\repos\ConsoleApp19Lambda\obj\Debug\netcoreapp3.1\ConsoleApp19Lambda.csprojAssemblyReference.cache
+C:\Users\julso\source\repos\ConsoleApp19Lambda\obj\Debug\netcoreapp3.1\ConsoleApp19Lambda.AssemblyInfoInputs.cache
+C:\Users\julso\source\repos\ConsoleApp19Lambda\obj\Debug\netcoreapp3.1\ConsoleApp19Lambda.AssemblyInfo.cs
+C:\Users\julso\source\repos\ConsoleApp19Lambda\obj\Debug\netcoreapp3.1\ConsoleApp19Lambda.csproj.CoreCompileInputs.cache
+C:\Users\julso\source\repos\ConsoleApp19Lambda\obj\Debug\netcoreapp3.1\ConsoleApp19Lambda.dll
+C:\Users\julso\source\repos\ConsoleApp19Lambda\obj\Debug\netcoreapp3.1\ConsoleApp19Lambda.pdb
+C:\Users\julso\source\repos\ConsoleApp19Lambda\obj\Debug\netcoreapp3.1\ConsoleApp19Lambda.genruntimeconfig.cache

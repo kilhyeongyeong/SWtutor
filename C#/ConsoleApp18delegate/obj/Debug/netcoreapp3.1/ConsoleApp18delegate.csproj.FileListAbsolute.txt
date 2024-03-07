@@ -1,0 +1,13 @@
+C:\Users\julso\source\repos\ConsoleApp18delegate\bin\Debug\netcoreapp3.1\ConsoleApp18delegate.exe
+C:\Users\julso\source\repos\ConsoleApp18delegate\bin\Debug\netcoreapp3.1\ConsoleApp18delegate.deps.json
+C:\Users\julso\source\repos\ConsoleApp18delegate\bin\Debug\netcoreapp3.1\ConsoleApp18delegate.runtimeconfig.json
+C:\Users\julso\source\repos\ConsoleApp18delegate\bin\Debug\netcoreapp3.1\ConsoleApp18delegate.runtimeconfig.dev.json
+C:\Users\julso\source\repos\ConsoleApp18delegate\bin\Debug\netcoreapp3.1\ConsoleApp18delegate.dll
+C:\Users\julso\source\repos\ConsoleApp18delegate\bin\Debug\netcoreapp3.1\ConsoleApp18delegate.pdb
+C:\Users\julso\source\repos\ConsoleApp18delegate\obj\Debug\netcoreapp3.1\ConsoleApp18delegate.csprojAssemblyReference.cache
+C:\Users\julso\source\repos\ConsoleApp18delegate\obj\Debug\netcoreapp3.1\ConsoleApp18delegate.AssemblyInfoInputs.cache
+C:\Users\julso\source\repos\ConsoleApp18delegate\obj\Debug\netcoreapp3.1\ConsoleApp18delegate.AssemblyInfo.cs
+C:\Users\julso\source\repos\ConsoleApp18delegate\obj\Debug\netcoreapp3.1\ConsoleApp18delegate.csproj.CoreCompileInputs.cache
+C:\Users\julso\source\repos\ConsoleApp18delegate\obj\Debug\netcoreapp3.1\ConsoleApp18delegate.dll
+C:\Users\julso\source\repos\ConsoleApp18delegate\obj\Debug\netcoreapp3.1\ConsoleApp18delegate.pdb
+C:\Users\julso\source\repos\ConsoleApp18delegate\obj\Debug\netcoreapp3.1\ConsoleApp18delegate.genruntimeconfig.cache

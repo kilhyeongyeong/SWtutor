@@ -1,0 +1,13 @@
+D:\visualstudio\ConsoleApp15optional_params\bin\Debug\netcoreapp3.1\ConsoleApp15optional_params.exe
+D:\visualstudio\ConsoleApp15optional_params\bin\Debug\netcoreapp3.1\ConsoleApp15optional_params.deps.json
+D:\visualstudio\ConsoleApp15optional_params\bin\Debug\netcoreapp3.1\ConsoleApp15optional_params.runtimeconfig.json
+D:\visualstudio\ConsoleApp15optional_params\bin\Debug\netcoreapp3.1\ConsoleApp15optional_params.runtimeconfig.dev.json
+D:\visualstudio\ConsoleApp15optional_params\bin\Debug\netcoreapp3.1\ConsoleApp15optional_params.dll
+D:\visualstudio\ConsoleApp15optional_params\bin\Debug\netcoreapp3.1\ConsoleApp15optional_params.pdb
+D:\visualstudio\ConsoleApp15optional_params\obj\Debug\netcoreapp3.1\ConsoleApp15optional_params.AssemblyInfoInputs.cache
+D:\visualstudio\ConsoleApp15optional_params\obj\Debug\netcoreapp3.1\ConsoleApp15optional_params.AssemblyInfo.cs
+D:\visualstudio\ConsoleApp15optional_params\obj\Debug\netcoreapp3.1\ConsoleApp15optional_params.csproj.CoreCompileInputs.cache
+D:\visualstudio\ConsoleApp15optional_params\obj\Debug\netcoreapp3.1\ConsoleApp15optional_params.dll
+D:\visualstudio\ConsoleApp15optional_params\obj\Debug\netcoreapp3.1\ConsoleApp15optional_params.pdb
+D:\visualstudio\ConsoleApp15optional_params\obj\Debug\netcoreapp3.1\ConsoleApp15optional_params.genruntimeconfig.cache
+D:\visualstudio\ConsoleApp15optional_params\obj\Debug\netcoreapp3.1\ConsoleApp15optional_params.csprojAssemblyReference.cache
